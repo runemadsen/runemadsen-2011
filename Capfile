@@ -25,9 +25,13 @@ role :db, "184.106.217.110", :primary => true
 
 # Passenger stuff
 namespace :deploy do
- task :start do ; end
- task :stop do ; end
- task :restart, :roles => :app, :except => { :no_release => true } do
- run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
- end
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+  # This has not been tested yet
+  task :generate_assets, :roles => :web do
+	  send(:run, "cd #{release_path} && /usr/bin/jammit assets.yml")
+  end
 end

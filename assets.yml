@@ -8,4 +8,5 @@ javascripts:
 stylesheets:
   
   shared:
+    - public/stylesheets/reset.css
     - public/stylesheets/runemadsen.css

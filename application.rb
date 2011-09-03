@@ -7,8 +7,8 @@ require 'models/connection'
 
 class Application < Sinatra::Base
   
-  register Jammit
-  ::RAILS_ENV = "development"
+  register Jammit 
+  #::RAILS_ENV = "development"
   Jammit.load_configuration("assets.yml")
   register Padrino::Helpers
   
