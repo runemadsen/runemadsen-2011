@@ -1,0 +1,11 @@
+embed_assets: datauri
+package_assets: on
+#template_function: Handlebars.template
+compress_assets: off
+
+javascripts:
+
+stylesheets:
+  
+  shared:
+    - public/stylesheets/runemadsen.css
