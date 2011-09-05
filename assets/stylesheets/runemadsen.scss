@@ -100,7 +100,10 @@ ___________________________________________________ */
 	@include menu_item;
 	height: 100%;
 	float: left;
-	background-color: $gray;
+	border-right: 1px solid $light_gray;
+	&:hover {
+		border-right: 2px solid $white;
+	}
 }
 
 /* 	Grid
