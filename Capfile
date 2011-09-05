@@ -30,8 +30,4 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
-  # This has not been tested yet
-  task :generate_assets, :roles => :web do
-	  send(:run, "cd #{release_path} && /usr/bin/jammit assets.yml")
-  end
 end
