@@ -23,8 +23,8 @@ class Application < Sinatra::Base
 
     css :application, ['/stylesheets/reset.css', '/stylesheets/runemadsen.css']
 
-    js_compression  :jsmin      # Optional
-    css_compression :sass       # Optional
+    js_compression  :jsmin
+    css_compression :sass
   }
     
   #   Home

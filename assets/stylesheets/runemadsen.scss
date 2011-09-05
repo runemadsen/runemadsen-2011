@@ -1,0 +1,186 @@
+body {
+	font-family: Helvetica, Arial;
+	font-size: 14px;
+	color: #000;
+	background-color: #fefcf8;
+/*	background-image: url('../images/ver_grid.jpg');*/
+}
+
+#container {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+/* 	Colors
+___________________________________________________ */
+
+$white: #FFFFFF;
+$dark_gray: #2e2d2e;
+$gray: #333333;
+$light_gray: #4d4c4d;
+$purple: #c022a4;
+$green: #16ad16;
+$red: #ea001a;
+$blue: #1c81cf;
+$yellow: #eadc00;
+
+/* 	Metrics
+___________________________________________________ */
+
+$menu_padding: 20px;
+$ver_grid: 12px;
+$hor_grid: 60px;
+$hor_grid_margin: 15px;
+
+/* Fonts
+___________________________________________________ */
+
+p {
+	margin-top: 7px;
+	margin-bottom: $ver_grid;
+	line-height: $ver_grid * 2;
+}
+
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+/* Header
+___________________________________________________ */
+
+#header {
+	margin-top: $ver_grid;
+	margin-bottom: $ver_grid * 4;
+	height: 30px;
+	line-height: 30px;
+	background-color: $dark_gray;
+}
+
+#header ul {
+	float: right;
+}
+
+#header ul li {
+	float: left;
+	list-style: none;
+	height: 100%;
+	border-left: 1px solid $light_gray;
+}
+
+@mixin active($selector, $color) {
+	#header ul li##{$selector}.active,
+	#header ul li##{$selector}:hover {
+		border-left: 2px solid $color;
+		a {
+			padding-left: $menu_padding - 1;
+		}
+	}
+}
+
+@include active(menu_blog, $purple);
+@include active(menu_work, $green);
+@include active(menu_code, $red);
+@include active(menu_info, $blue);
+@include active(menu_mail, $yellow);
+
+@mixin menu_item {
+	color: $white;
+	font-size: 13px;
+	text-decoration: none;
+	padding: 0px $menu_padding;
+	display: block;
+}
+
+#header ul li a {
+	@include menu_item;
+}
+
+#header a#logo {
+	@include menu_item;
+	height: 100%;
+	float: left;
+	background-color: $gray;
+}
+
+/* 	Grid
+		1080 pixels width, 12 columns
+		60 pixel + 15 margin each side per column
+___________________________________________________ */
+
+.dummy {
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+@mixin grid($grid_size) {
+	.grid_#{$grid_size} {
+		margin: 0 $hor_grid_margin;
+		float: left;
+		width: ($hor_grid * $grid_size) + (($hor_grid_margin * 2) * ($grid_size - 1));
+	}
+}
+
+@include grid(1);
+@include grid(2);
+@include grid(3);
+@include grid(4);
+@include grid(5);
+@include grid(6);
+@include grid(7);
+@include grid(8);
+@include grid(9);
+@include grid(10);
+@include grid(11);
+@include grid(12);
+
+/* 	Box
+		A box is 100 x 100 pixels
+		No margin
+___________________________________________________ */
+
+.box_1, .box_2, .box_3 {
+	float: left;
+} 
+
+.box_1 {
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+}
+
+.box_2 {
+	background-color: #ccc;
+	width: 200px;
+	height: 200px;
+}
+
+.box_3 {
+	background-color: #ccc;
+	width: 300px;
+	height: 300px;
+}
+
+.box_test {
+	width: 240px;
+	height: 240px;
+	background-color: #ccc;
+}
+
+/* 	Other
+___________________________________________________ */
+
+.background_gray {
+	background-color: gray;
+}
+
+.clear {
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
