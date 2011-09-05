@@ -1,0 +1,197 @@
+body {
+	font-family: Helvetica, Arial;
+	font-size: 14px;
+	color: #000;
+	background-color: #fefcf8;
+/*	background-image: url('../images/vertical_grid.jpg');*/
+}
+
+/* 	Grid
+		1080 pixels width, 12 columns
+		60 pixel + 15 margin each side per column
+___________________________________________________ */
+
+#container {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.dummy {
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.grid_1, .grid_3, .grid_4, .grid_5, .grid_7, .grid_8, .grid_9, .grid_12  {
+	margin-left: 15px;
+	margin-right: 15px;
+	float: left;
+}
+
+.grid_1 {
+	background-color: #F0847C;
+	width: 60px;
+}
+
+.grid_3 {
+	width: 240px;
+}
+
+.grid_4 {
+	width: 330px;
+}
+
+.grid_5 {
+	width: 420px;
+}
+
+.grid_7 {
+	width: 600px;
+	background-color: #F0847C;
+}
+
+.grid_8 {
+	width: 690px;
+	
+}
+
+.grid_9 {
+	width: 780px;
+	background-color: #F0847C;
+}
+
+.grid_12 {
+	width: 1050px;
+	background-color: #F0847C;
+}
+
+/* 	Box
+		A box is 100 x 100 pixels
+		No margin
+___________________________________________________ */
+
+.box_1, .box_2, .box_3 {
+	float: left;
+} 
+
+.box_1 {
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+}
+
+.box_2 {
+	background-color: #ccc;
+	width: 200px;
+	height: 200px;
+}
+
+.box_3 {
+	background-color: #ccc;
+	width: 300px;
+	height: 300px;
+}
+
+.box_test {
+	width: 240px;
+	height: 240px;
+	background-color: #ccc;
+}
+
+/* Fonts
+___________________________________________________ */
+
+p {
+	margin-top: 7px;
+	margin-bottom: 12px;
+	line-height: 24px;
+}
+
+a {
+	color: #0f5ae8;
+}
+
+.link_style2 a {
+	color: gray;
+	text-decoration: none;
+}
+
+.link_style2 a:hover {
+	color: #0f5ae8;
+}
+
+/* Header
+___________________________________________________ */
+
+#header {
+	margin-top: 12px;
+	margin-bottom: 48px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #2e2d2e;
+}
+
+#header ul {
+	float: right;
+}
+
+#header ul li {
+	float: left;
+	list-style: none;
+	height: 100%;
+}
+
+#header ul li a {
+	color: #e4e4e4;
+	font-size: 13px;
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+	background-color: #2e2d2e;
+}
+
+#header ul li a.background_color1 {
+	background-color: #3e393a;
+}
+
+#header ul li a.active {
+/*	background-color: #b10168;*/
+}
+
+#header a#logo {
+	color: #e4e4e4;
+	font-size: 13px;
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 100%;
+	display: block;
+	float: left;
+	background-color: #343334;
+}
+
+#menu_info {
+	height: 33px;
+	float: left;
+	padding-left: 20px;
+	color: #e4e4e4;
+	font-size: 12px;
+}
+
+/* 	Other
+___________________________________________________ */
+
+.background_gray {
+	background-color: gray;
+}
+
+.clear {
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}

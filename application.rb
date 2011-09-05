@@ -7,10 +7,28 @@ require 'models/connection'
 
 class Application < Sinatra::Base
   
-  register Jammit 
-  #::RAILS_ENV = "development"
-  Jammit.load_configuration("assets.yml")
+  #   Setup assetpack
+  #---------------------------------------
+  
+  set :root, File.dirname(__FILE__)
+  register Sinatra::AssetPack
   register Padrino::Helpers
+
+  assets {
+    serve '/javascripts', :from => 'assets/javascripts'
+    serve '/stylesheets', :from => 'assets/stylesheets'
+    serve '/images', :from => 'assets/images'
+
+    js :front, ['/javascripts/vendor/**/*.js', '/js/app/**/*.js']
+
+    css :application, ['/stylesheets/reset.css', '/stylesheets/runemadsen.css']
+
+    js_compression  :jsmin      # Optional
+    css_compression :sass       # Optional
+  }
+    
+  #   Home
+  #---------------------------------------
   
   get '/' do
     erb :front
