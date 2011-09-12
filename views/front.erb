@@ -2,36 +2,41 @@
   <%= css :application, :media => 'screen' %>
 	<%= js  :front %>
 <% end %>
+
+	<% @matrix.each_with_index do |n, i| %>
+		<%= i % 6 == 5 ? "#{n} <br />" : "#{n}" %>
+	<% end %>
+	
+	<%= hi("rune") %>
 	
 	<div class="grid_7">
-		<!-- <div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div>
-				<div class="box_1 background_gray">&nbsp;</div>
-				<div class="box_1">&nbsp;</div> -->
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
 		
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
+		<div class="box_1 background_gray">&nbsp;</div>
+		<div class="box_1">&nbsp;</div>
 		<div class="clear"></div>
 	</div>
 	<div class="grid_5" id="welcome">

@@ -2,14 +2,17 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 require 'models/connection'
+require 'helpers'
 
 # DataMapper.auto_upgrade!
 
 class Application < Sinatra::Base
   
+  helpers Helpers::Front
+  
   #   Setup assetpack
   #---------------------------------------
-  
+  # make all these into modules
   set :root, File.dirname(__FILE__)
   register Sinatra::AssetPack
   register Padrino::Helpers
@@ -25,12 +28,24 @@ class Application < Sinatra::Base
 
     js_compression  :jsmin
     css_compression :sass
-  }
+  } 
     
   #   Home
   #---------------------------------------
   
   get '/' do
+    
+    @matrix = Array.new(24) { -1 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     erb :front
   end
 
