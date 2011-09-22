@@ -111,66 +111,14 @@ ___________________________________________________ */
 		60 pixel + 15 margin each side per column
 ___________________________________________________ */
 
-.dummy {
-	background-color: #ccc;
-	width: 100px;
-	height: 100px;
-	float: left;
-}
-
-@mixin grid($grid_size) {
-	.grid_#{$grid_size} {
-		margin: 0 $hor_grid_margin;
-		float: left;
-		width: ($hor_grid * $grid_size) + (($hor_grid_margin * 2) * ($grid_size - 1));
-	}
-}
-
-@include grid(1);
-@include grid(2);
-@include grid(3);
-@include grid(4);
-@include grid(5);
-@include grid(6);
-@include grid(7);
-@include grid(8);
-@include grid(9);
-@include grid(10);
-@include grid(11);
-@include grid(12);
+@import "grid";
 
 /* 	Box
 		A box is 100 x 100 pixels
 		No margin
 ___________________________________________________ */
 
-.box_1, .box_2, .box_3 {
-	float: left;
-} 
-
-.box_1 {
-	background-color: #ccc;
-	width: 100px;
-	height: 100px;
-}
-
-.box_2 {
-	background-color: #ccc;
-	width: 200px;
-	height: 200px;
-}
-
-.box_3 {
-	background-color: #ccc;
-	width: 300px;
-	height: 300px;
-}
-
-.box_test {
-	width: 240px;
-	height: 240px;
-	background-color: #ccc;
-}
+@import "boxes";
 
 /* 	Other
 ___________________________________________________ */

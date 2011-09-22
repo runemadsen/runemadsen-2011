@@ -1,0 +1,27 @@
+.dummy {
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+@mixin grid($grid_size) {
+	.grid_#{$grid_size} {
+		margin: 0 $hor_grid_margin;
+		float: left;
+		width: ($hor_grid * $grid_size) + (($hor_grid_margin * 2) * ($grid_size - 1));
+	}
+}
+
+@include grid(1);
+@include grid(2);
+@include grid(3);
+@include grid(4);
+@include grid(5);
+@include grid(6);
+@include grid(7);
+@include grid(8);
+@include grid(9);
+@include grid(10);
+@include grid(11);
+@include grid(12);

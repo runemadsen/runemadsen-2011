@@ -1,0 +1,14 @@
+ @mixin box($box_size) {
+	.box_#{$box_size} {
+		float: left;
+		width: $box_size * 100;
+		background-color: red;
+	}
+}
+
+@include box(1);
+@include box(2);
+@include box(3);
+@include box(4);
+@include box(5);
+@include box(6);
